@@ -22,3 +22,8 @@ def index(req):
         print(services)
         return render(req, 'myapp/index.html', { 'services': services })
 
+def main(req):
+    return render(req, 'myapp/main.html') 
+
+def home(req):
+    return render(req, 'myapp/home.html') 

@@ -4,40 +4,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="django form with utf-8">
-    <meta name="author" content="wichit2s">
-    <title>Linux Services</title>
-
+    <meta name="author" content="jakkrit">
+    <title>jakkrit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     {% load static %}
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
 
     <style>
       .filled {
-        width: 80%;
+        width: 50%;
         padding: 5px;
       }
       .spacing {
         padding: 1em;
       }
-    </style>
+    </style>s
   </head>
-  <body>
-    <nav> <h1> Linux Services Page </h1> </nav>
+  <body background="https://images.pexels.com/photos/1040473/pexels-photo-1040473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    
+    <nav> <h1> ------------------------------------    web  test ------------------------------------</h1> </nav>
     <div>
       <section class="filled">
-        <form action="index" method="POST" enctype="multipart/form-data;charset=UTF-8">
-          {% csrf_token %}
-          <div class="spacing"><input class="filled" type="text" name="icon" value="icon ไอคอน"/></div>
-          <div class="spacing"><input class="filled" type="text" name="title" value="title บริการ"/></div>
-          <div class="spacing"><input class="filled" type="text" name="detail" value="detail รายละเอียด"/></div>
-          <div class="spacing"><button style="padding: 2em;" type="submit">Submit</button></div>
-        </form>
+          <form action="index" method="POST" enctype="multipart/form-data;charset=UTF-8">
+            {% csrf_token %}
+            <div class="spacing"><input class="filled" type="text" name="icon" value="jakkrit"/></div>
+            <div class="spacing"><input class="filled" type="text" name="title" value="montreewong"/></div>
+            <div class="spacing"><input class="filled" type="text" name="detail" value="61114440081"/></div>
+            <div class="spacing"><button style="padding: 0.5em;" type="submit">Submit</button></div>
+          </form>
       </section>
       <div>
-       <table style="width:80%; border: 1px solid black; padding: 1em;">
+          
+          <center><table style="width:80%; border: 1px solid rgb(255, 255, 255); padding: 1em;">
         <tr>
-          <th>Icon</th>
-          <th>Title</th>
-          <th>Detail</th>
+         
+          <th>ชื่่อ</th>
+          <th>นามสกุล</th>
+          <th>รหัสนักศึกษา</th>
+        
         </tr>
         {% for s in services %}
         <tr>
@@ -46,14 +53,57 @@
           <td>{{ s.detail }}</td>
         </tr>
         {% endfor %}
-      </table> 
+      </table> </center>
       </div>
     </div>
+    <html>
+<head>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+.button1 {border-radius: 8px;}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+.button2 {border-radius: 8px;}
+
+
+</style>
+</head>
+<body><br>
+
+
+<center><a href="home"><button class="button button1">Home</button></a>
+<a href="main"><button class="button button2">main</button></a></center>
+
+</body>
+</html>
+
+    
     <footer>
-      <div>
-        <div>Copyright &copy; 2019 </div>
-      </div>
+     
     </footer>
   </body>
+  
 
 </html>
