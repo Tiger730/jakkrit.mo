@@ -21,24 +21,39 @@
       .spacing {
         padding: 1em;
       }
-    </style>s
+      body {margin:25px;}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+    </style>
   </head>
-  <body background="https://images.pexels.com/photos/1040473/pexels-photo-1040473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+  <body background="https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
     
-    <nav> <h1> ------------------------------------    web  test ------------------------------------</h1> </nav>
+    <nav><center> <h1>web  test</h1> </center></nav>
     <div>
       <section class="filled">
           <form action="index" method="POST" enctype="multipart/form-data;charset=UTF-8">
             {% csrf_token %}
-            <div class="spacing"><input class="filled" type="text" name="icon" value="jakkrit"/></div>
-            <div class="spacing"><input class="filled" type="text" name="title" value="montreewong"/></div>
-            <div class="spacing"><input class="filled" type="text" name="detail" value="61114440081"/></div>
+            ชื่อ<div class="spacing"><input class="filled" type="text" name="icon" value=""/></div>
+            นามสกุล<div class="spacing"><input class="filled" type="text" name="title" value=""/></div>
+            รหัสนักศึกษา<div class="spacing"><input class="filled" type="text" name="detail" value=""/></div>
             <div class="spacing"><button style="padding: 0.5em;" type="submit">Submit</button></div>
           </form>
       </section>
       <div>
-          
-          <center><table style="width:80%; border: 1px solid rgb(255, 255, 255); padding: 1em;">
+          <center>
+        <div class="polaroid">
+            <div class="container">
+          <table style="width:80%; border: 1px solid rgb(255, 255, 255); padding: 1em;">
         <tr>
          
           <th>ชื่่อ</th>
@@ -53,7 +68,12 @@
           <td>{{ s.detail }}</td>
         </tr>
         {% endfor %}
-      </table> </center>
+      </table> 
+    </div>
+    </div>
+  </center>
+
+
       </div>
     </div>
     <html>
@@ -87,6 +107,13 @@
 }
 .button2 {border-radius: 8px;}
 
+.button3 {
+    background-color: rgb(252, 247, 247); 
+    color: black; 
+    border: 2px solid rgb(151, 70, 158);
+}
+.button3 {border-radius: 8px;}
+
 
 </style>
 </head>
@@ -94,7 +121,8 @@
 
 
 <center><a href="home"><button class="button button1">Home</button></a>
-<a href="main"><button class="button button2">main</button></a></center>
+<a href="main"><button class="button button2">main</button></a>
+<a href="profile"><button class="button button3">profile</button></a></center>
 
 </body>
 </html>

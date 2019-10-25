@@ -22,6 +22,7 @@ urlpatterns = [
     path('',appview.main),
     path('index' , appview.index),
     path('main' , appview.main),
-    path('home', appview.home)
+    path('home', appview.home),
+    path('profile', appview.profile)
     
 ]

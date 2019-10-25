@@ -27,3 +27,6 @@ def main(req):
 
 def home(req):
     return render(req, 'myapp/home.html') 
+
+def profile(req):
+    return render(req, 'myapp/profile.html') 
